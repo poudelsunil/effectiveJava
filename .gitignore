@@ -1,2 +1,4 @@
 .idea
- effectivejava/target/classes/*
+
+#ignore all class files
+*.class

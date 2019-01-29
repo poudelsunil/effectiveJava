@@ -1,12 +1,12 @@
 public class BuilderPattern {
     public static void main(String...args){
-        Student student = new Student.Builder(123).name("Ram").address("Kathmandu").build();
-        System.out.println(student);
+        MyStudent myStudent = new MyStudent.Builder(123).name("Ram").address("Kathmandu").build();
+        System.out.println(myStudent);
     }
 }
 
 
-class Student{
+class MyStudent {
     private final int roll;
     private final String name;
     private final String address;
@@ -31,12 +31,12 @@ class Student{
             return this;
         }
 
-        public Student build(){
-            return new Student(this);
+        public MyStudent build(){
+            return new MyStudent(this);
         }
     }
 
-    private Student(Builder builder){
+    private MyStudent(Builder builder){
         roll = builder.roll;
         name = builder.name;
         address = builder.address;
